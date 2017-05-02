@@ -16,12 +16,42 @@ body {
   margin-right: auto;
 }
 
+.adventure {
+  border-left: .3rem solid #d1d1d1;
+  padding-left: 8px;
+}
+
 .adventure-image {
   display: block;
   height: 200px;
   margin: 0 auto;
 }
 
-.row {
-  flex-wrap: wrap;
+.wrapper {
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  margin-bottom: 2em;
+}
+
+.wider {
+  grid-column: span 2;
+}
+
+@media(max-width:845px) {
+  .wrapper {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    text-align: center;
+    justify-content: center;
+  }
+  .adventure {
+    margin: 8px;
+    border-left: 0;
+    border-top: .3rem solid #d1d1d1;
+  }
+  .adventure, .adventure-image {
+    max-width: 100%;
+  }
 }
